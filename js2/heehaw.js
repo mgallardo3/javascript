@@ -21,4 +21,8 @@ for (let num =1; num <=100; num+=1)
     {
         console.log("Haw! ");
     }
+    else
+    {
+        console.log(num);
+    }
 }
