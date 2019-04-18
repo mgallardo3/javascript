@@ -44,3 +44,14 @@ function heeHaw(input)
         }
     }
 }
+
+//tests special case
+console.log("Special case: enter 0");
+heeHaw(0);
+console.log("Special case: a negative number");
+heeHaw(-5);
+console.log("Where input = 1");
+heeHaw(1);
+console.log("Where input = 30");
+heeHaw(30);
+
