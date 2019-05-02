@@ -52,3 +52,35 @@ var people = [
     }
 
 ];
+
+//Grab the button and assign a function
+let search = document.getElementById('search');
+search.onclick = findPerson;
+
+//Get the information stored in the inputBox
+let inputBox = document.getElementById('box');
+
+//Get the div to display the result
+let output = document.getElementById('result');
+
+function findPerson()
+{
+    //Collect the entered name, transform the name to uppercase for comparison purposes
+    let name = inputBox.value;
+    name = name.toUpperCase();
+    if(name === "")
+    {
+        output.innerHTML = "<p>Please enter a name to start your search</p>"
+    }
+    else
+    {
+        //filter the search by name
+        const foundPerson = JSON.stringify(
+            people.filter(person => person.name.toUpperCase().match(name)));
+        console.log(foundPerson);
+
+        //Display the value
+        output.innerHTML = foundPerson;
+    }
+
+}
